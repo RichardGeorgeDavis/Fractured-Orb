@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fractured Orb</title>
+    <meta
+      name="description"
+      content="A browser-based study of the Shadertoy piece Fractured Orb."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&family=Cormorant+Garamond:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="scene" aria-label="Animated fractured orb study"></canvas>
+
+    <details class="admin-panel" open>
+      <summary>Admin Panel</summary>
+      <div class="admin-grid">
+        <label class="toggle-row" for="setting-wobble">
+          <span>Wobble Mode</span>
+          <input id="setting-wobble" type="checkbox" />
+        </label>
+
+        <label class="toggle-row" for="setting-dark-mode">
+          <span>Dark Mode</span>
+          <input id="setting-dark-mode" type="checkbox" />
+        </label>
+
+        <label class="control" for="setting-dispersion">
+          <span>Dispersion</span>
+          <output id="setting-dispersion-value">3</output>
+          <input id="setting-dispersion" type="range" min="1" max="5" step="1" />
+        </label>
+
+        <label class="control" for="setting-bounces">
+          <span>Bounces</span>
+          <output id="setting-bounces-value">4</output>
+          <input id="setting-bounces" type="range" min="1" max="10" step="1" />
+        </label>
+
+        <label class="control" for="setting-focus-point">
+          <span>Focus Point</span>
+          <output id="setting-focus-point-value">0.65</output>
+          <input id="setting-focus-point" type="range" min="0.2" max="2" step="0.01" />
+        </label>
+
+        <label class="control" for="setting-focus-scale">
+          <span>Focus Scale</span>
+          <output id="setting-focus-scale-value">1.00</output>
+          <input id="setting-focus-scale" type="range" min="0.1" max="3" step="0.01" />
+        </label>
+
+        <label class="control" for="setting-blur">
+          <span>Blur Radius</span>
+          <output id="setting-blur-value">10.0</output>
+          <input id="setting-blur" type="range" min="1" max="20" step="0.1" />
+        </label>
+
+        <label class="control" for="setting-gamma">
+          <span>Gamma</span>
+          <output id="setting-gamma-value">1.25</output>
+          <input id="setting-gamma" type="range" min="0.6" max="2.2" step="0.01" />
+        </label>
+
+        <label class="control" for="setting-boost">
+          <span>Boost</span>
+          <output id="setting-boost-value">2.50</output>
+          <input id="setting-boost" type="range" min="0.5" max="4" step="0.01" />
+        </label>
+
+        <label class="control" for="setting-exposure">
+          <span>Exposure</span>
+          <output id="setting-exposure-value">16.0</output>
+          <input id="setting-exposure" type="range" min="4" max="32" step="0.1" />
+        </label>
+
+        <label class="control" for="setting-speed">
+          <span>Speed</span>
+          <output id="setting-speed-value">1.00</output>
+          <input id="setting-speed" type="range" min="0.1" max="2.5" step="0.01" />
+        </label>
+
+        <button class="reset-button" id="reset-settings" type="button">Reset Defaults</button>
+      </div>
+    </details>
+
+    <div class="hud">
+      <p class="eyebrow">Shader Study</p>
+      <h1>Fractured Orb</h1>
+      <p class="description">
+        A WebGL port of the supplied Shadertoy scene and depth-of-field passes.
+      </p>
+      <p class="status" id="status" hidden></p>
+      <a
+        href="https://www.shadertoy.com/view/ttycWW"
+        target="_blank"
+        rel="noreferrer"
+      >
+        Open Reference
+      </a>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>
