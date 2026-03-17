@@ -1,5 +1,9 @@
 # Fractured Orb
 
+<!-- workspace-hub:cover:start -->
+![Fractured Orb cover](cover.png)
+<!-- workspace-hub:cover:end -->
+
 Fractured Orb is a static WebGL2 shader study that recreates the supplied Shadertoy scene as a browser experience with a lightweight control panel.
 
 The project renders the orb scene into an offscreen framebuffer, then runs a composite pass for depth-of-field and grading. It also exposes tuning controls for animation, dispersion, blur, focus, and color treatment.
