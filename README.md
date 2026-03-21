@@ -10,6 +10,8 @@ The project renders the orb scene into an offscreen framebuffer, then runs a com
 
 ## Demo
 
+Preview: [Fractured Orb](https://proto.lucidity.design/sites/Fractured-Orb/)
+
 Reference shader: [Shadertoy - Fractured Orb](https://www.shadertoy.com/view/ttycWW)
 
 ## Features
@@ -46,6 +48,28 @@ python3 -m http.server 8080
 Then open [http://localhost:8080](http://localhost:8080).
 
 Any static server will work.
+
+## Build
+
+There is no build step for this project.
+
+- The app is plain HTML, CSS, JavaScript, and GLSL shader files.
+- To preview locally, run any static HTTP server from the project root.
+- To deploy, publish the repository contents directly as a static site.
+- The deployable output is the source tree itself:
+  - `index.html`
+  - `main.js`
+  - `styles.css`
+  - `shaders/`
+  - `cover.png`
+
+Example local preview command:
+
+```bash
+python3 -m http.server 8080
+```
+
+Then open [http://localhost:8080](http://localhost:8080).
 
 ## Requirements
 
